@@ -1,14 +1,18 @@
-# SFB Dynamics: Pico Beacon Configuration Settings
+# SFB Dynamics: AM Beacon & Synth System Parameters
+import board
 
-# Device Identification
-BEACON_ID = "SFB-NODE-01"
-DEVICE_NAME = "Small Form Beacon Pico"
+# System Information
+DEVICE_NAME = "SFB Dynamics 20-Song MIDI Station"
+BEACON_ID = "SFB-MIDI-BEACON-01"
 
-# Radio Transmission Parameters
-FREQUENCY_MHZ = 433.92        # Standard unlicensed ISM band
-TX_INTERVAL_SECONDS = 5       # Delay between beacon pulses
-TX_POWER_LEVEL = "LOW"        # Keeps power within low-power rules
+# Hardware Pin Mapping
+AUDIO_PWM_PIN = board.GP16      # Audio output (connect to RC filter / headphone jack)
+AM_CARRIER_PIN = board.GP14     # 600 kHz AM radio broadcast carrier output
 
-# Pin Definitions (Raspberry Pi Pico RP2040)
-STATUS_LED_PIN = 25           # Onboard LED pin
-RF_TX_PIN = 15                # Digital transmit trigger pin
+# Frequency & Audio Configuration
+AM_CARRIER_FREQ = 600000        # 600 kHz AM Band (Medium-Wave Broadcast)
+SAMPLE_RATE = 22050             # 22.05 kHz synthesis sample rate
+MAX_POLYPHONY = 12              # Maximum concurrent synth voices
+
+# Storage & File System Paths
+MIDI_DIR = "/midi"              # Folder on Pico drive containing .mid tracks
