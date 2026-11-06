@@ -15,3 +15,12 @@ Universal 20-Song MIDI Synthesizer and 600 kHz AM Carrier Broadcast Engine power
 2. Copy the contents of `/src/` to your Pico drive root.
 3. Ensure `/lib/adafruit_midi` is present on the Pico drive.
 4. Place up to 20 `.mid` files inside a `/midi` folder on the Pico drive.
+
+5. ## Licensing & Copyright
+
+© 2026 **SFB Dynamics**. All rights reserved.
+
+This project is released under the **PolyForm Noncommercial License 1.0.0**. 
+
+* **Permitted:** Personal testing, educational use, non-commercial hardware builds, and code modifications for private use.
+* **Prohibited:** Commercial sales, selling pre-built boards/kits, paid distribution, or incorporating any code/designs into commercial products without explicit written permission from SFB Dynamics.
